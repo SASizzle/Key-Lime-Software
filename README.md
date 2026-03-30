@@ -30,13 +30,13 @@ Each department can run its own isolated copy of the software and maintain its o
 
 ## Preview
 
-![Dashboard](docs/dashboard.png)
+![Dashboard](dashboard.png)
 
-![Schools Page](docs/schools.png)
+![Schools Page](schools.png)
 
-![Scrape Results](docs/scrape-result.png)
+![Scrape Results](scrape-result.png)
 
-![Export Page](docs/export.png)
+![Export Page](export.png)
 
 ## Features
 - Dashboard for scrape activity and contact confidence
