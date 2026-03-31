@@ -1,7 +1,7 @@
 # Key-Lime-Software
 Welcome! This is the landing page for all projects related to Key Lime Software (formerly Pastel Platypus Posse). Here you'll see snapshots and information about our products!
 
-# Oklahoma High School Contact Finder
+# Contact Finder - URL-based Data Extractor
 
 A full-stack web application designed to help identify and organize Oklahoma high school college liaisons and related staff contacts for student outreach initiatives.
 
