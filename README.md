@@ -32,11 +32,17 @@ Each department can run its own isolated copy of the software and maintain its o
 
 ![Dashboard](dashboard.png)
 
-![Schools Page](schools.png)
+![Schools Page](school-list.png)
 
 ![Scrape Results](scrape-result.png)
 
-![Export Page](export.png)
+![Advanced Contact View Overlay](adv-contact-view.png)
+
+![Contact Review Page](contact-review.png)
+
+![Export Page (Light Mode)](light-export.png)
+
+![Settings Overlay](settings.png)
 
 ## Features
 - Dashboard for scrape activity and contact confidence
