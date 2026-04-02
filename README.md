@@ -4,7 +4,7 @@ Welcome! This is the landing page for projects developed under Key Lime Software
 
 ---
 
-# Contact Finder — URL-Based Data Extractor
+# Contact Finder: URL-Based Data Extractor
 
 A full-stack web application designed to identify, analyze, and organize Oklahoma high school college liaisons and related staff contacts for outreach initiatives.
 
