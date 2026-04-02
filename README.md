@@ -30,11 +30,11 @@ Each department can run its own isolated copy of the software and maintain its o
 
 ## Preview
 
-![Dashboard](dashboard.png)
+![Dashboard](dashboard2.png)
 
 ![Schools Page](school-list.png)
 
-![Scrape Results](scrape-result.png)
+![Scrape Results](scrape-result2.png)
 
 ![Advanced Contact View Overlay](adv-contact-view.png)
 
