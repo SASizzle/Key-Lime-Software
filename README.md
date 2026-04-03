@@ -1,6 +1,6 @@
 # Key Lime Software
 
-Welcome! This is the landing page for projects developed under Key Lime Software (formerly Pastel Platypus Posse). This repository currently hosts the **KLS Contact Finder**, a web-based tool for discovering and reviewing school contact data.
+Welcome! This repository contains projects developed under **Key Lime Software (KLS)** (formerly Pastel Platypus Posse). This repository currently hosts the **KLS Contact Finder**, a web-based tool for discovering, reviewing, and managing school contact data.
 
 ---
 
@@ -12,35 +12,62 @@ A full-stack web application designed to identify, analyze, and organize Oklahom
 
 ## Current Status
 
-This project is an actively developed FastAPI-based local web application focused on scraping, scoring, and reviewing school contact data.
+This project is an actively developed FastAPI-based local web application that has progressed beyond a prototype into a functional system with persistence and data workflows.
 
-### Current Features
-- Local browser-based UI powered by FastAPI
-- School List page with live scrape trigger
-- Custom contact scraper with scoring and deduplication logic
-- Advanced Contact View overlay for quick inspection of scrape results
-- Dedicated Contact Review page for comparing and selecting contacts
+Core scraping, review, persistence, and import/export functionality are operational.
+
+---
+
+## Current Features
+
+### Core Workflow
+- Local browser-based UI powered by FastAPI  
+- School List page with live scrape trigger  
+- Custom contact scraper with scoring and deduplication logic  
+- Advanced Contact View overlay for inspecting scrape results  
+- Dedicated Contact Review page for comparing and selecting contacts  
+
+### Persistence
+- SQLite-backed storage for:
+  - schools  
+  - contacts  
+  - verified (official) contact selections  
+- Data persists across sessions  
+
+### Import / Export
+- CSV Import system:
+  - preview before commit  
+  - validation of required fields  
+  - duplicate detection and skipping  
+- Export page:
+  - database-backed preview  
+  - CSV download of best contacts  
+
+### User Interface
+- Shared sidebar navigation across all pages  
+- Active page highlighting  
 - Global settings panel with:
-  - Dark mode
-  - Compact layout
-  - Debug options (scaffolding)
-- Persistent frontend settings via localStorage
-- Key Lime-themed UI with light/dark mode support
-- Jinja-based templating system
-- CSV export preview functionality
-- Logging system for debugging and diagnostics
+  - dark mode  
+  - compact layout  
+  - debug options (scaffolding)  
+- Persistent user settings via localStorage  
+- Key Lime-themed UI with light/dark support  
+
+### System Features
+- Logging system for debugging and diagnostics  
+- Jinja-based templating with shared base layout  
+- Modular architecture for scraper and backend expansion  
 
 ---
 
 ## In Progress / Planned Features
 
-- SQLite-backed persistence layer
-- Saving scrape results and verified contacts
-- CSV-based school seeding
-- Manual school entry and editing
-- Contact review persistence (approval workflow)
-- Improved scraper handling for complex/dynamic school websites
-- Expanded export and reporting capabilities
+- Excel (.xlsx) import support  
+- Flexible column mapping for imported datasets  
+- Improved scraper handling for dynamic or JavaScript-heavy sites  
+- Contact history tracking and audit trail  
+- Expanded dashboard metrics and reporting  
+- Bulk operations and filtering tools  
 
 ---
 
@@ -49,9 +76,9 @@ This project is an actively developed FastAPI-based local web application focuse
 The application is designed for **local, department-level deployment**.
 
 Each organization can:
-- Run its own isolated instance
-- Maintain its own dataset
-- Avoid reliance on external servers or shared infrastructure
+- run its own isolated instance  
+- maintain its own dataset  
+- avoid reliance on external servers or shared infrastructure  
 
 ---
 
@@ -67,7 +94,7 @@ Each organization can:
 
 ![Contact Review Page](contact-review.png)
 
-![Export Page (Light Mode)](light-export.png)
+![Export Page](light-export.png)
 
 ![Settings Overlay](settings.png)
 
@@ -75,51 +102,56 @@ Each organization can:
 
 ## Key Features
 
-- Dashboard for scrape activity and confidence metrics
-- School List with integrated scraping workflow
-- Advanced contact inspection via overlay modal
-- Contact Review page for manual validation
-- Export-ready data structure
-- Configurable UI settings (dark mode, layout, etc.)
-- Modular scraping and scoring architecture
-- Logging support for debugging and troubleshooting
+- End-to-end workflow: scrape → review → persist → export  
+- School List with integrated scraping workflow  
+- Advanced contact inspection via overlay modal  
+- Contact Review page for manual validation  
+- Import and export support for data management  
+- Configurable UI settings (dark mode, layout, etc.)  
+- Modular scraping and scoring architecture  
+- Logging support for debugging and troubleshooting  
 
 ---
 
 ## Tech Stack
 
-- Python
-- FastAPI
-- JavaScript (Vanilla)
-- HTML / CSS
-- SQLite (planned integration)
-- VS Code
+- Python  
+- FastAPI  
+- JavaScript (Vanilla)  
+- HTML / CSS  
+- SQLite  
+- Jinja2  
+- VS Code  
 
 ---
 
 ## Project Notes
 
-This project is currently in an **early-stage prototype / pre-production phase**.
+This project is currently in an **early-stage production-ready phase**.
 
-Core workflows are functional, but:
-- Data persistence is not yet implemented
-- Scraper accuracy is still being refined
-- Review selections are not yet saved
+### Current Strengths
+- Fully functional core workflow  
+- Persistent data storage  
+- Import and export capabilities  
+- Shared and maintainable UI structure  
 
-The current focus is on building a strong foundation for:
-- reliable scraping
-- intuitive review workflows
-- scalable architecture
+### Areas of Ongoing Development
+- Scraper accuracy for complex or inconsistent websites  
+- Import schema flexibility  
+- Performance optimization for larger datasets  
+- Enhanced analytics and reporting  
 
 ---
 
 ## Version
 
-**v0.2.0**
+**v0.2.1**
 
-Introduces:
-- Key Lime Software rebrand
-- Settings overlay system
-- Dark mode and UI theming
-- Advanced Contact View modal
-- Contact Review page workflow
+### Highlights
+- SQLite-backed persistence for contacts and review workflow  
+- CSV import system with preview and validation  
+- Database-driven export functionality  
+- Duplicate detection for imported contacts  
+- Shared sidebar navigation and active page highlighting  
+- Settings panel relocated to sidebar  
+- General UI cleanup and template consolidation  
