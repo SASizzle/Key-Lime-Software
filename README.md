@@ -12,9 +12,9 @@ A full-stack web application designed to identify, analyze, and organize Oklahom
 
 ## Current Status
 
-This project is an actively developed FastAPI-based local web application that has progressed beyond a prototype into a functional system with persistence and data workflows.
+This project is an actively developed FastAPI-based local web application that has progressed beyond a prototype into a functional system with persistence and structured data workflows.
 
-Core scraping, review, persistence, and import/export functionality are operational.
+The application now includes seeded datasets, school-level management, website discovery, and a full scrape → review → persist → export pipeline.
 
 ---
 
@@ -22,7 +22,10 @@ Core scraping, review, persistence, and import/export functionality are operatio
 
 ### Core Workflow
 - Local browser-based UI powered by FastAPI  
-- School List page with live scrape trigger  
+- School List page with:
+  - website status tracking  
+  - scrape readiness indicators  
+  - conditional scrape and discovery actions  
 - Custom contact scraper with scoring and deduplication logic  
 - Advanced Contact View overlay for inspecting scrape results  
 - Dedicated Contact Review page for comparing and selecting contacts  
@@ -32,7 +35,24 @@ Core scraping, review, persistence, and import/export functionality are operatio
   - schools  
   - contacts  
   - verified (official) contact selections  
+- Seeded Oklahoma high school dataset for immediate usability  
 - Data persists across sessions  
+
+### Website Management
+- Website lifecycle tracking:
+  - missing  
+  - candidate found  
+  - verified  
+  - manual review needed  
+  - failed  
+- Website autodiscovery for schools without URLs  
+- Scrape readiness classification:
+  - no website  
+  - needs review  
+  - lookup failed  
+  - ready  
+- Manual override and validation for school website data  
+- Automatic cleanup of stale discovery metadata after verification  
 
 ### Import / Export
 - CSV Import system:
@@ -46,6 +66,10 @@ Core scraping, review, persistence, and import/export functionality are operatio
 ### User Interface
 - Shared sidebar navigation across all pages  
 - Active page highlighting  
+- School List enhancements:
+  - status badges  
+  - readiness indicators  
+  - inactive school filtering  
 - Global settings panel with:
   - dark mode  
   - compact layout  
@@ -57,17 +81,19 @@ Core scraping, review, persistence, and import/export functionality are operatio
 - Logging system for debugging and diagnostics  
 - Jinja-based templating with shared base layout  
 - Modular architecture for scraper and backend expansion  
+- Structured API routes for school, contact, and workflow management  
 
 ---
 
 ## In Progress / Planned Features
 
+- Batch website discovery and bulk scraping workflows  
 - Excel (.xlsx) import support  
 - Flexible column mapping for imported datasets  
 - Improved scraper handling for dynamic or JavaScript-heavy sites  
 - Contact history tracking and audit trail  
 - Expanded dashboard metrics and reporting  
-- Bulk operations and filtering tools  
+- Performance optimization for larger datasets  
 
 ---
 
@@ -103,7 +129,9 @@ Each organization can:
 ## Key Features
 
 - End-to-end workflow: scrape → review → persist → export  
-- School List with integrated scraping workflow  
+- Seeded school dataset for immediate onboarding  
+- Website discovery and validation workflow  
+- School List with status and readiness indicators  
 - Advanced contact inspection via overlay modal  
 - Contact Review page for manual validation  
 - Import and export support for data management  
@@ -121,6 +149,8 @@ Each organization can:
 - HTML / CSS  
 - SQLite  
 - Jinja2  
+- BeautifulSoup  
+- Requests  
 - VS Code  
 
 ---
@@ -132,11 +162,13 @@ This project is currently in an **early-stage production-ready phase**.
 ### Current Strengths
 - Fully functional core workflow  
 - Persistent data storage  
-- Import and export capabilities  
-- Shared and maintainable UI structure  
+- Seeded dataset for immediate usability  
+- Website lifecycle and readiness tracking  
+- Structured and maintainable UI system  
 
 ### Areas of Ongoing Development
 - Scraper accuracy for complex or inconsistent websites  
+- Website autodiscovery reliability  
 - Import schema flexibility  
 - Performance optimization for larger datasets  
 - Enhanced analytics and reporting  
@@ -145,13 +177,15 @@ This project is currently in an **early-stage production-ready phase**.
 
 ## Version
 
-**v0.2.1**
+**v0.3.0**
 
 ### Highlights
-- SQLite-backed persistence for contacts and review workflow  
-- CSV import system with preview and validation  
-- Database-driven export functionality  
-- Duplicate detection for imported contacts  
-- Shared sidebar navigation and active page highlighting  
-- Settings panel relocated to sidebar  
-- General UI cleanup and template consolidation  
+- Seeded Oklahoma high school dataset  
+- School editing workflow with validation  
+- Website status tracking and lifecycle management  
+- Scrape readiness indicators in School List  
+- Website autodiscovery with scoring and filtering  
+- Inactive school filtering and management  
+- Cleanup of stale autodiscovery metadata after manual verification  
+- Improved Advanced Contact View modal  
+- UI polish and consistency improvements  
