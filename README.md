@@ -18,6 +18,21 @@ The application now includes seeded datasets, school-level management, website d
 
 ---
 
+## Version v0.3.0
+
+### Highlights
+- Seeded Oklahoma high school dataset  
+- School editing workflow with validation  
+- Website status tracking and lifecycle management  
+- Scrape readiness indicators in School List  
+- Website autodiscovery with scoring and filtering  
+- Inactive school filtering and management  
+- Cleanup of stale autodiscovery metadata after manual verification  
+- Improved Advanced Contact View modal  
+- UI polish and consistency improvements
+
+---
+
 ## Current Features
 
 ### Core Workflow
@@ -171,21 +186,4 @@ This project is currently in an **early-stage production-ready phase**.
 - Website autodiscovery reliability  
 - Import schema flexibility  
 - Performance optimization for larger datasets  
-- Enhanced analytics and reporting  
-
----
-
-## Version
-
-**v0.3.0**
-
-### Highlights
-- Seeded Oklahoma high school dataset  
-- School editing workflow with validation  
-- Website status tracking and lifecycle management  
-- Scrape readiness indicators in School List  
-- Website autodiscovery with scoring and filtering  
-- Inactive school filtering and management  
-- Cleanup of stale autodiscovery metadata after manual verification  
-- Improved Advanced Contact View modal  
-- UI polish and consistency improvements  
+- Enhanced analytics and reporting
