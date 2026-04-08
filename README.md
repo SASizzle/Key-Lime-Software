@@ -18,85 +18,47 @@ The application now includes seeded datasets, school-level management, website d
 
 ---
 
-## Version v0.3.0
+## Version v0.4.0
 
 ### Highlights
-- Seeded Oklahoma high school dataset  
-- School editing workflow with validation  
-- Website status tracking and lifecycle management  
-- Scrape readiness indicators in School List  
-- Website autodiscovery with scoring and filtering  
-- Inactive school filtering and management  
-- Cleanup of stale autodiscovery metadata after manual verification  
-- Improved Advanced Contact View modal  
-- UI polish and consistency improvements
+- School data seeding from external datasets  
+- Website normalization to handle inconsistent input formats  
+- Automated contact discovery from public-facing sources  
+- Contact scoring and prioritization  
+- Manual review and verification workflows  
+- Outreach tracking and activity logging  
+- Contact lifecycle status management  
+- Centralized outreach activity view  
+- CSV export for downstream usage 
 
 ---
 
 ## Current Features
 
-### Core Workflow
-- Local browser-based UI powered by FastAPI  
-- School List page with:
-  - website status tracking  
-  - scrape readiness indicators  
-  - conditional scrape and discovery actions  
-- Custom contact scraper with scoring and deduplication logic  
-- Advanced Contact View overlay for inspecting scrape results  
-- Dedicated Contact Review page for comparing and selecting contacts  
+### School Data Management
+- Local database of school records  
+- Structured import and normalization pipeline  
+- Active/inactive school tracking  
 
-### Persistence
-- SQLite-backed storage for:
-  - schools  
-  - contacts  
-  - verified (official) contact selections  
-- Seeded Oklahoma high school dataset for immediate usability  
-- Data persists across sessions  
+### Contact Discovery
+- Automated identification of potential staff contacts  
+- Heuristic-based prioritization of relevant roles  
+- Aggregation of contact data from multiple sources  
 
-### Website Management
-- Website lifecycle tracking:
-  - missing  
-  - candidate found  
-  - verified  
-  - manual review needed  
-  - failed  
-- Website autodiscovery for schools without URLs  
-- Scrape readiness classification:
-  - no website  
-  - needs review  
-  - lookup failed  
-  - ready  
-- Manual override and validation for school website data  
-- Automatic cleanup of stale discovery metadata after verification  
+### Review Workflow
+- Side-by-side comparison of candidate contacts  
+- Selection of an official outreach contact per school  
+- Reviewer notes and validation tracking  
 
-### Import / Export
-- CSV Import system:
-  - preview before commit  
-  - validation of required fields  
-  - duplicate detection and skipping  
-- Export page:
-  - database-backed preview  
-  - CSV download of best contacts  
+### Outreach Tracking
+- Logging of outreach actions across multiple methods  
+- Historical tracking of communication attempts  
+- Contact status progression (e.g., not contacted, attempted, responded, inactive)  
+- Centralized outreach activity feed  
 
-### User Interface
-- Shared sidebar navigation across all pages  
-- Active page highlighting  
-- School List enhancements:
-  - status badges  
-  - readiness indicators  
-  - inactive school filtering  
-- Global settings panel with:
-  - dark mode  
-  - compact layout  
-  - debug options (scaffolding)  
-- Persistent user settings via localStorage  
-- Key Lime-themed UI with light/dark support  
-
-### System Features
-- Logging system for debugging and diagnostics  
-- Jinja-based templating with shared base layout  
-- Modular architecture for scraper and backend expansion  
-- Structured API routes for school, contact, and workflow management  
+### Data Export
+- Export of structured school and contact data  
+- Supports reporting, handoff, and external workflows
 
 ---
 
