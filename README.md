@@ -27,25 +27,25 @@ The application runs locally and is intended for private, department-level or ow
 
 ---
 
-## Version v0.5.0
+## Version v0.6.0
 
 ### Release Highlights
 
-Version **0.5.0** expands the project from a basic scrape-and-review prototype into a more complete local contact operations tool.
+Version **0.6.0** continues the transition from a scrape-and-review prototype into a more dependable local contact operations tool.
 
 Key additions and improvements include:
 
-- local SQLite-backed persistence for schools, contacts, and outreach history
-- batch scrape job tracking with progress and cancellation support
-- improved scrape merge behavior to preserve useful data across re-scrapes
-- global contact management view with search, filters, sorting, and pagination
-- outreach history as a structured, first-class workflow
-- CSV preview/validation/commit import flow
-- CSV and XLSX export support
-- manual school and contact entry flows
-- improved settings persistence and live application of settings changes
-- stronger scraper cleanup to reject sentence-like junk names and titles
-- continued UI refinement for local operational use
+- batch scrape workflow refinements with live school-level progress readouts
+- cross-page batch status visibility while navigating the app
+- improved batch cancellation behavior and stale-job recovery after restarts
+- faster scraper page processing with configurable request and browser timeouts
+- better junk-contact filtering for non-person labels and noisy page artifacts
+- improved title/name pairing in certain staff-directory and mailto-based layouts
+- stronger website autodiscovery with smarter Oklahoma district-domain guessing
+- school-list search plus denser filter layouts across major workflow pages
+- export preview pagination fixes and filtered export workflow improvements
+- broader, full-palette appearance customization across supported color profiles
+- startup guidance that some districts may restrict public directory access
 
 ---
 
@@ -56,14 +56,15 @@ Key additions and improvements include:
 - Active/inactive school tracking
 - Website status and scrape readiness indicators
 - Manual school entry and editing
-- School pagination and list management
+- School pagination, search, and list management
 
 ### Contact Discovery
 - Automated contact discovery from public-facing school websites
 - Heuristic scoring for likely outreach-relevant roles
 - Requests + BeautifulSoup scraping with selective Playwright fallback
 - Duplicate reduction and contact merge behavior across re-scrapes
-- Improved filtering of junk names and sentence-like title text
+- Improved filtering of junk names, portal-like labels, and non-person directory artifacts
+- Website autodiscovery support for schools with missing or uncertain website records
 
 ### Review Workflow
 - **Quick Review** for fast official-contact decisions
@@ -105,6 +106,7 @@ Key additions and improvements include:
 ### User Experience
 - Settings modal with live-applied preferences
 - Dark mode and appearance settings
+- Broader color-profile control across the full interface palette
 - Table usability improvements
 - Fixed/collapsible sidebar
 - Local-first workflow optimized for speed and repeat use
@@ -144,11 +146,11 @@ It exists to provide:
 
 ## Preview
 
-![Dashboard](dashboard2.png)
+![Dashboard](dashboard.png)
 
 ![School List](school-list.png)
 
-![Scrape Results](scrape-result2.png)
+![Scrape Results](scrape-result.png)
 
 ![Advanced Contact View Overlay](adv-contact-view.png)
 
@@ -208,4 +210,4 @@ The application is built around a local web app architecture using:
 
 KLS Contact Finder is currently in an active pre-v1 release phase.
 
-Version **0.5.0** represents a major step forward in turning the project into a practical local outreach operations tool rather than a simple scraping utility.
+Version **0.6.0** reflects a meaningful round of refinement around batch operations, scraper quality, website autodiscovery, filtering/export workflows, and operator-facing usability.
