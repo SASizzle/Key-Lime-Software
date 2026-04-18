@@ -1,87 +1,144 @@
-# Key Lime Software
+# KLS Contact Finder
 
-Welcome! This repository contains projects developed under **Key Lime Software (KLS)** (formerly Pastel Platypus Posse). This repository currently hosts the **KLS Contact Finder**, a web-based tool for discovering, reviewing, and managing school contact data.
+**KLS Contact Finder** is a local-first outreach contact management system built for discovering, reviewing, verifying, and tracking school contacts over time.
 
----
+Originally developed under **Key Lime Software (KLS)**, this project focuses on Oklahoma high school outreach workflows and is designed for practical day-to-day use by a single operator on a local machine.
 
-# Contact Finder: URL-Based Data Extractor
-
-A full-stack web application designed to identify, analyze, and organize Oklahoma high school college liaisons and related staff contacts for outreach initiatives.
-
----
-
-## Current Status
-
-This project is an actively developed FastAPI-based local web application that has progressed beyond a prototype into a functional system with persistence and structured data workflows.
-
-The application now includes seeded datasets, school-level management, website discovery, and a full scrape → review → persist → export pipeline.
+> Note: The active source repository for the application is private.  
+> This public repository is used for project information, release visibility, and previews.
 
 ---
 
-## Version v0.4.0
+## Overview
 
-### Highlights
-- School data seeding from external datasets  
-- Website normalization to handle inconsistent input formats  
-- Automated contact discovery from public-facing sources  
-- Contact scoring and prioritization  
-- Manual review and verification workflows  
-- Outreach tracking and activity logging  
-- Contact lifecycle status management  
-- Centralized outreach activity view  
-- CSV export for downstream usage 
+KLS Contact Finder is not just a scraper.
+
+It is a workflow-focused system for:
+
+- discovering likely contacts from school websites
+- reviewing and validating candidate contacts
+- storing verified contacts locally
+- tracking outreach history and status
+- filtering and organizing records
+- exporting usable outreach data
+- maintaining a trustworthy local dataset over time
+
+The application runs locally and is intended for private, department-level or owner-operated use rather than cloud-hosted multi-user deployment.
 
 ---
 
-## Current Features
+## Version v0.5.0
 
-### School Data Management
-- Local database of school records  
-- Structured import and normalization pipeline  
-- Active/inactive school tracking  
+### Release Highlights
+
+Version **0.5.0** expands the project from a basic scrape-and-review prototype into a more complete local contact operations tool.
+
+Key additions and improvements include:
+
+- local SQLite-backed persistence for schools, contacts, and outreach history
+- batch scrape job tracking with progress and cancellation support
+- improved scrape merge behavior to preserve useful data across re-scrapes
+- global contact management view with search, filters, sorting, and pagination
+- outreach history as a structured, first-class workflow
+- CSV preview/validation/commit import flow
+- CSV and XLSX export support
+- manual school and contact entry flows
+- improved settings persistence and live application of settings changes
+- stronger scraper cleanup to reject sentence-like junk names and titles
+- continued UI refinement for local operational use
+
+---
+
+## Current Capabilities
+
+### School Management
+- Local database of school records
+- Active/inactive school tracking
+- Website status and scrape readiness indicators
+- Manual school entry and editing
+- School pagination and list management
 
 ### Contact Discovery
-- Automated identification of potential staff contacts  
-- Heuristic-based prioritization of relevant roles  
-- Aggregation of contact data from multiple sources  
+- Automated contact discovery from public-facing school websites
+- Heuristic scoring for likely outreach-relevant roles
+- Requests + BeautifulSoup scraping with selective Playwright fallback
+- Duplicate reduction and contact merge behavior across re-scrapes
+- Improved filtering of junk names and sentence-like title text
 
 ### Review Workflow
-- Side-by-side comparison of candidate contacts  
-- Selection of an official outreach contact per school  
-- Reviewer notes and validation tracking  
+- **Quick Review** for fast official-contact decisions
+- **Full Review** for deeper record management and outreach context
+- Reviewer notes and verification tracking
+- Official contact selection per school
 
 ### Outreach Tracking
-- Logging of outreach actions across multiple methods  
-- Historical tracking of communication attempts  
-- Contact status progression (e.g., not contacted, attempted, responded, inactive)  
-- Centralized outreach activity feed  
+- Structured outreach history per contact
+- Methods supported:
+  - email
+  - phone call
+  - text
+  - in person
+  - mailed material
+  - other
+- Contact status tracking:
+  - not contacted
+  - attempted
+  - responded
+  - inactive
+- Central outreach activity view
 
-### Data Export
-- Export of structured school and contact data  
-- Supports reporting, handoff, and external workflows
+### Contact Management
+- Global contact table
+- Keyword search
+- Filtering by school, district, city, status, email/phone presence, notes, outreach state, and verification state
+- Sorting and pagination
+- Manual contact entry
+- Trust and completeness cues for faster review
 
----
+### Import / Export
+- CSV import preview before commit
+- Validation and duplicate-aware import handling
+- Export preview and scoped export
+- CSV export
+- XLSX export
 
-## In Progress / Planned Features
-
-- Batch website discovery and bulk scraping workflows  
-- Excel (.xlsx) import support  
-- Flexible column mapping for imported datasets  
-- Improved scraper handling for dynamic or JavaScript-heavy sites  
-- Contact history tracking and audit trail  
-- Expanded dashboard metrics and reporting  
-- Performance optimization for larger datasets  
+### User Experience
+- Settings modal with live-applied preferences
+- Dark mode and appearance settings
+- Table usability improvements
+- Fixed/collapsible sidebar
+- Local-first workflow optimized for speed and repeat use
 
 ---
 
 ## Deployment Model
 
-The application is designed for **local, department-level deployment**.
+KLS Contact Finder is designed for **local-first deployment**.
 
-Each organization can:
-- run its own isolated instance  
-- maintain its own dataset  
-- avoid reliance on external servers or shared infrastructure  
+The intended operating model is:
+
+- single owner/operator
+- local machine use
+- local data storage
+- no dependence on external hosted infrastructure
+- browser-based local app experience
+- packaged desktop launcher support for demo/release builds
+
+This project is intentionally optimized for simple private use before any future multi-user or enterprise features.
+
+---
+
+## Public Repository Note
+
+This public repository does **not** contain the active private source code for the full application.
+
+It exists to provide:
+
+- product overview
+- release/version visibility
+- preview screenshots
+- project notes
+- public-facing changelog context
 
 ---
 
@@ -103,49 +160,52 @@ Each organization can:
 
 ---
 
-## Key Features
+## Product Direction
 
-- End-to-end workflow: scrape → review → persist → export  
-- Seeded school dataset for immediate onboarding  
-- Website discovery and validation workflow  
-- School List with status and readiness indicators  
-- Advanced contact inspection via overlay modal  
-- Contact Review page for manual validation  
-- Import and export support for data management  
-- Configurable UI settings (dark mode, layout, etc.)  
-- Modular scraping and scoring architecture  
-- Logging support for debugging and troubleshooting  
+KLS Contact Finder is being developed toward a stable **v1.0.0** local release focused on:
+
+- stronger contact discovery quality
+- clearer trust and verification signals
+- better record maintenance over time
+- reliable batch workflows
+- practical local packaging and deployment
+
+Current development is centered on making the tool operationally dependable rather than expanding into enterprise-only feature areas.
+
+---
+
+## Planned / Ongoing Improvements
+
+Areas still being refined include:
+
+- deeper single-school scrape accuracy
+- clearer scrape confidence and source transparency
+- stronger full-review record management workflows
+- additional duplicate-handling safeguards
+- continued UI polish for dense operational tables
+- final packaging and local release hardening
 
 ---
 
 ## Tech Stack
 
-- Python  
-- FastAPI  
-- JavaScript (Vanilla)  
-- HTML / CSS  
-- SQLite  
-- Jinja2  
-- BeautifulSoup  
-- Requests  
-- VS Code  
+The application is built around a local web app architecture using:
+
+- Python
+- FastAPI
+- SQLite
+- SQLAlchemy
+- Jinja2
+- Vanilla JavaScript
+- HTML / CSS
+- Requests
+- BeautifulSoup
+- Playwright
 
 ---
 
-## Project Notes
+## Status
 
-This project is currently in an **early-stage production-ready phase**.
+KLS Contact Finder is currently in an active pre-v1 release phase.
 
-### Current Strengths
-- Fully functional core workflow  
-- Persistent data storage  
-- Seeded dataset for immediate usability  
-- Website lifecycle and readiness tracking  
-- Structured and maintainable UI system  
-
-### Areas of Ongoing Development
-- Scraper accuracy for complex or inconsistent websites  
-- Website autodiscovery reliability  
-- Import schema flexibility  
-- Performance optimization for larger datasets  
-- Enhanced analytics and reporting
+Version **0.5.0** represents a major step forward in turning the project into a practical local outreach operations tool rather than a simple scraping utility.
