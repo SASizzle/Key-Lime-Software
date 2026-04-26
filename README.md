@@ -4,11 +4,41 @@ KLS Contact Finder is a local-first outreach contact management system for Oklah
 
 This README is the entry point. The fuller product documentation set lives in [`docs/`](docs/).
 
+## Product Preview
+
+### Dashboard
+
+![KLS Contact Finder dashboard preview](Product%20Previews/dashboard-page.png)
+
+### School List
+
+![KLS Contact Finder school list preview](Product%20Previews/schools-page.png)
+
+### Contact Quick Review
+
+![KLS Contact Finder contact review preview](Product%20Previews/quick-review.png)
+
+### Export Preview
+
+![KLS Contact Finder export preview](Product%20Previews/export-page.png)
+
+### Dark Mode - Lime
+
+![KLS Contact Finder lime dark](Product%20Previews/lime-dark.png)
+
+### Light Mode - Sunset
+
+![KLS Contact Finder sunset light](Product%20Previews/sunset-light.png)
+
+### Dark Mode - Sunset
+
+![KLS Contact Finder sunset dark](Product%20Previews/sunset-dark.png)
+
 ## Project Status
 
 - The app is functionally usable today for local outreach work.
-- The repository includes the original `v1.0.0` release plus follow-up refinements recorded in [`CHANGELOG.md`](CHANGELOG.md).
-- This README reflects current repository behavior rather than only the original launch state.
+- The repository DOES NOT include the original `v1.0.0` release or follow-up refinements recorded in [`CHANGELOG.md`](CHANGELOG.md).
+- This README reflects private repository behavior rather than only the original launch state.
 
 ## Current Features
 
@@ -41,48 +71,11 @@ This README is the entry point. The fuller product documentation set lives in [`
 
 ## Documentation Set
 
-- [`docs/PRESS_RELEASE.md`](docs/PRESS_RELEASE.md): customer-facing summary
-- [`docs/FAQ.md`](docs/FAQ.md): user questions, design decisions, and limitations
-- [`docs/PRODUCT_SPEC.md`](docs/PRODUCT_SPEC.md): product goals, workflows, behavior, dependencies, and known gaps
-- [`docs/USE_CASES.md`](docs/USE_CASES.md): real step-by-step workflow scenarios
-- [`docs/OWNER_MANUAL.md`](docs/OWNER_MANUAL.md): day-to-day operational guide
-
-## Run Locally
-
-From the project root:
-
-```powershell
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-If you are using the local virtual environment:
-
-```powershell
-.venv\Scripts\python -m pip install -r requirements.txt
-.venv\Scripts\python -m uvicorn app.main:app --reload
-```
-
-Open the app at:
-
-```text
-http://127.0.0.1:8000/dashboard
-```
-
-## Packaging
-
-This repo includes:
-
-- `launcher.py`
-- `KLS_Contact_Finder.spec`
-
-Build a portable Windows executable with:
-
-```powershell
-pyinstaller KLS_Contact_Finder.spec
-```
-
-The packaged build starts a local server, opens the dashboard in the default browser, and shuts down when no tracked browser tabs remain open.
+- [`PRESS_RELEASE.md`](PRESS_RELEASE.md): customer-facing summary
+- [`FAQ.md`](FAQ.md): user questions, design decisions, and limitations
+- [`PRODUCT_SPEC.md`](PRODUCT_SPEC.md): product goals, workflows, behavior, dependencies, and known gaps
+- [`USE_CASES.md`](USE_CASES.md): real step-by-step workflow scenarios
+- [`OWNER_MANUAL.md`](OWNER_MANUAL.md): day-to-day operational guide
 
 ## Runtime Behavior
 
@@ -107,4 +100,4 @@ The packaged build starts a local server, opens the dashboard in the default bro
 
 - [`CHANGELOG.md`](CHANGELOG.md)
 - [`LICENSE`](LICENSE)
-- [`docs/OWNER_MANUAL.md`](docs/OWNER_MANUAL.md)
+- [`OWNER_MANUAL.md`](OWNER_MANUAL.md)
